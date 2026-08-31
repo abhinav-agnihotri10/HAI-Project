@@ -8,8 +8,8 @@ from pathlib import Path
 # ---------------------------------------
 # LOAD TRAINED MODEL
 # ---------------------------------------
-home_dir = Path.home()
-file_path = home_dir / "Downloads" / "compas_final_model.pkl"
+APP_DIR = Path(__file__).resolve().parent
+file_path = APP_DIR / "compas_final_model.pkl"
 
 if not file_path.exists():
     st.error(f"""Model file was not found.
